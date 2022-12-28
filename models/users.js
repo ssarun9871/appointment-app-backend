@@ -7,6 +7,7 @@ const User = sequelize.define('users',{
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
+
     },
     name:{
         type: Sequelize.STRING,
@@ -14,11 +15,13 @@ const User = sequelize.define('users',{
     },
     email:{
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
     },
     phone:{
         type: Sequelize.INTEGER,
-        allowNull:false
+        allowNull:false,
+        unique: true
     }
 })
 module.exports = User;
